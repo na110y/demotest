@@ -1,0 +1,16 @@
+// khai báo các dạng chung
+@import "./variables";
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: $font; // kiểu chữ
+  color: $text-colorRank;
+  line-height: 1;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}

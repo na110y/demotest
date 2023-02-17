@@ -1,0 +1,298 @@
+@import "../../variables";
+@import "../../mixins/mixins";
+.contener {
+  font-family: $font;
+}
+.menu-icon_mobile {
+  display: none;
+  cursor: pointer;
+  @include deptop820 {
+    display: block;
+  }
+}
+#aboutme {
+  max-width: 1920px;
+  width: 100%;
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0 32px; // khoảng cách giữa các item
+  justify-content: center;
+  @include deptop1230 {
+    gap: 0 20px; // khoảng cách giữa các item
+  }
+  @include deptop1190 {
+    gap: 0 30px; // khoảng cách giữa các item
+  }
+  @include deptop1000 {
+    gap: 0 20px; // khoảng cách giữa các item
+  }
+  @include deptop820 {
+    gap: 0 300px; // khoảng cách giữa các item
+  }
+  @include deptop390 {
+    gap: 0 110px; // khoảng cách giữa các item
+  }
+}
+.itemMenu {
+  @include deptop820 {
+    display: none;
+  }
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93px;
+  @include deptop820 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+  @include deptop390 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  #iconMenum {
+    @include deptop390 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .menu-item {
+    &_logo {
+      #logoHeader {
+        @include deptop390 {
+          width: 140px;
+          height: 100px;
+        }
+      }
+    }
+    &_product {
+      color: $text-color;
+      font-weight: 500;
+    }
+    &_service {
+      color: $text-color;
+      font-weight: 500;
+    }
+    &_aboutMirae {
+      color: $text-colorRank;
+      font-weight: 400;
+    }
+    &_news {
+      color: $text-colorRank;
+      font-weight: 400;
+    }
+  }
+
+  .menu-last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn-buy {
+      margin-left: 47px;
+      margin-right: 16px;
+      background-color: $text-color;
+      border-radius: 4px;
+      cursor: pointer;
+      &_insurance {
+        color: #ffff;
+        padding: 12px 24px;
+        font-weight: 700;
+      }
+      @include deptop1190 {
+        display: none;
+      }
+    }
+  }
+  .language {
+    display: flex;
+    justify-content: center;
+    .language-dropdown {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    @include deptop1190 {
+      margin-left: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    @include deptop820 {
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    @include deptop390 {
+      margin-left: 10px;
+    }
+  }
+}
+
+@include deptop820 {
+  .menu-mobile {
+    position: fixed;
+    background: linear-gradient(180deg, #fe858d 0%, #fe616b 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    z-index: 1;
+
+    .menu-link {
+      display: block;
+
+      .menu-item {
+        padding: 40px 0;
+        color: #ffffff;
+        padding: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+
+        .menu-item_logo {
+          display: none;
+        }
+        &:hover {
+          cursor: pointer;
+          background: linear-gradient(180deg, #fe858d 0%, #fe616b 100%);
+        }
+        &_product {
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 20px;
+
+          &:hover {
+            background: linear-gradient(180deg, #fe858d 0%, #fe616b 100%);
+          }
+        }
+        &_service {
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 20px;
+
+          &:hover {
+            background: linear-gradient(180deg, #fe858d 0%, #fe616b 100%);
+          }
+        }
+        &_aboutMirae {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 20px;
+
+          &:hover {
+            background: linear-gradient(180deg, #fe858d 0%, #fe616b 100%);
+          }
+        }
+        &_news {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 20px;
+
+          &:hover {
+            background: linear-gradient(180deg, #fe858d 0%, #fe616b 100%);
+          }
+        }
+      }
+    }
+    .closeMenu {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      cursor: pointer;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .btn-buy_insurance {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}
+@include deptop390 {
+  .menu-mobile {
+    position: fixed;
+    background: linear-gradient(180deg, #fe858d 0%, #fe616b 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+
+    .menu-link {
+      display: block;
+
+      .menu-item {
+        color: #ffffff;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+
+        .menu-item_logo {
+          display: none;
+        }
+        &:hover {
+          background: linear-gradient(180deg, #e69ca1 0%, #d36a71 100%);
+        }
+        &_product {
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 18px;
+
+          &:hover {
+            background: linear-gradient(180deg, #e69ca1 0%, #d36a71 100%);
+          }
+        }
+        &_service {
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 18px;
+
+          &:hover {
+            background: linear-gradient(180deg, #e69ca1 0%, #d36a71 100%);
+          }
+        }
+        &_aboutMirae {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 18px;
+
+          &:hover {
+            background: linear-gradient(180deg, #e69ca1 0%, #d36a71 100%);
+          }
+        }
+        &_news {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 18px;
+
+          &:hover {
+            background: linear-gradient(180deg, #e69ca1 0%, #d36a71 100%);
+          }
+        }
+      }
+    }
+    .closeMenu {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      cursor: pointer;
+      #closeMobile {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .btn-buy_insurance {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./global.scss";
+@import "../fonts/font.scss";
+@import "./layout/header/theHeader";
+@import "./layout/content/theContent";
+@import "./layout/content/theAbout";
+@import "./layout/footer/theFooter";
+@import "./mixins/mixins";
